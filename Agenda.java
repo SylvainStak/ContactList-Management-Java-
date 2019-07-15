@@ -199,11 +199,13 @@ public class Agenda {
                             validName = true;
 
                             //Comprueba que el nombre no se encuentre ya en la agenda
-                            for (int j = 0; j < contactos.size(); j++) {
-                                if (contactos.get(j).GetNombre().equals(nombre)) {
-                                    uniqueName = false;
+                            if(!nombre.equals(contacto)){
+                                for (int j = 0; j < contactos.size(); j++) {
+                                    if (contactos.get(j).GetNombre().equals(nombre)) {
+                                        uniqueName = false;
+                                    }
                                 }
-                            }
+                            }                            
                         }
                     } while (!validName || !uniqueName);
 
